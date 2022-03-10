@@ -16,8 +16,9 @@ const isLiked = (id) => {
 };
 
 const addToLiked = (id) => {
-    likedPostsId.push(id); 
-    showPosts(posts);
+  likedPostsId.push(id); 
+  showPosts(posts);
+
 };
 
 const reportPost = (id) => {
@@ -31,6 +32,7 @@ const displayContent = (text) => {
 };
 
 const switchTab = (id) => {
+  debugger
     if (id === "posts") {
         document.getElementById( "posts" ).style.display = "grid";
         document.getElementById( "liked" ).style.display = "none";
@@ -144,6 +146,7 @@ const showPosts = (posts) => {
 
 const displayLikedPosts = () => {
     const likedPosts = getLikedPosts();
+    document.getElementById( "liked" ).textContent =""
     likedPosts.forEach((post) => {
         const div = createPost(post);
         document.getElementById( "liked" ).appendChild(div);
