@@ -245,6 +245,11 @@ img {
   display: none;
 }
 
+.text{
+  text-align: justify;
+}
+
+
 @media only screen and (max-width: 992px) {
   #posts {
     grid-template-columns: repeat(2, 1fr);
